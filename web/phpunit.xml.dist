@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<<<<<<< HEAD
+<!-- https://phpunit.de/manual/current/en/appendixes.configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
+=======
+<!-- http://phpunit.de/manual/4.1/en/appendixes.configuration.html -->
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.1/phpunit.xsd"
+>>>>>>> e5a2ae49cba43d101ae005dde87fdc212e2be227
+         backupGlobals="false"
+         colors="true"
+         bootstrap="app/autoload.php"
+>
+    <php>
+        <ini name="error_reporting" value="-1" />
+<<<<<<< HEAD
+        <server name="KERNEL_DIR" value="app/" />
+=======
+>>>>>>> e5a2ae49cba43d101ae005dde87fdc212e2be227
+    </php>
+
+    <testsuites>
+        <testsuite name="Project Test Suite">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+
+<<<<<<< HEAD
+=======
+    <php>
+        <server name="KERNEL_DIR" value="app/" />
+    </php>
+
+>>>>>>> e5a2ae49cba43d101ae005dde87fdc212e2be227
+    <filter>
+        <whitelist>
+            <directory>src</directory>
+            <exclude>
+                <directory>src/*Bundle/Resources</directory>
+                <directory>src/*/*Bundle/Resources</directory>
+                <directory>src/*/Bundle/*Bundle/Resources</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
