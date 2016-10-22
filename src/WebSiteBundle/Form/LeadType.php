@@ -24,8 +24,11 @@ class LeadType extends AbstractType
             ->add('email', EmailType::class, array('label' => 'Correo Electrónico'))
             ->add('phone', TextType::class, array('label' => 'Teléfono'))
             ->add('location', TextType::class, array('label' => 'Localidad'))
-            ->add('typo',ChoiceType::class, ['choices'  => ['Soy transportista y estoy interesado en trabajar con Traqui' => 'carrier',
-                                                            'Me gustaria usar el servicio de Traqui para transportar algo' => 'shipper'],
+            ->add('typo',ChoiceType::class, ['choices'  => ['Quiero especializar mi formacion' => 'a',
+                                                            'Me gustaria encontrar un trabajo temporal' => 'b',
+                                          							    'Necesito trabajar cuanto antes' => 'c',
+                                          							    'Me gustaria tener mas posibilidades de trabajar' => 'd']
+                                                            ,
                                               'expanded' => true,
                                               'label' => '¿Por que te interesa Empleate?'
                                             ]
