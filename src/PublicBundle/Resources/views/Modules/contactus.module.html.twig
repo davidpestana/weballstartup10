@@ -1,0 +1,33 @@
+<div class="row no-gutter">
+    <div class="col-md-6">
+        <div id="map"></div>
+    </div>
+
+    <div class="col-md-6">
+        <div id="contact-form-wrapper">
+            <div class="contact_form_holder">
+                <form id="contact" class="row" name="form1" method="post" action="">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="{% trans %}_contact_form_name_holder{% endtrans %}" />
+
+                    <div id="error_email" class="error">{% trans %}_contact_form_email_error{% endtrans %}</div>
+                    <input type="text" class="form-control" name="email" id="email" placeholder="{% trans %}_contact_form_email_holder{% endtrans %}" />
+
+                    <div id="error_message" class="error">{% trans %}_contact_form_message_error{% endtrans %}</div>
+                    <textarea cols="10" rows="10" name="message" id="message" class="form-control" placeholder="{% trans %}_contact_form_message_holder{% endtrans %}"></textarea>
+
+                    <div id="mail_success" class="success">{% trans %}_contact_form_success{% endtrans %}</div>
+                    <div id="mail_failed" class="error">{% trans %}_contact_form_failed{% endtrans %}</div>
+
+                    <p id="btnsubmit">
+                        <input type="submit" id="send" value="{% trans %}_contact_form_button{% endtrans %}" class="btn btn-custom" />
+                    </p>
+
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>

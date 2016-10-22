@@ -1,0 +1,30 @@
+{% extends 'WebSiteBundle::layout.html.twig' %}
+
+
+{% block title %}
+  {% trans %}_home_title{% endtrans %}
+{% endblock %}
+
+{% block content %}
+
+  {% include ('WebSiteBundle:Modules:welcome.module.html.twig') %}
+  <!-- Content
+  ============================================= -->
+  <section id="content">
+    <div class="content-wrap">
+
+        {% include ('WebSiteBundle:Modules:target.module.html.twig') %}
+
+        {% include ('WebSiteBundle:Modules:functions.module.html.twig') %}
+
+
+        {% include ('WebSiteBundle:Modules:steps.module.html.twig') %}
+
+        {% include ('WebSiteBundle:Modules:reviews.module.html.twig') %}
+
+        {# include ('WebSiteBundle:Modules:customerlogos.module.html.twig') #}
+
+    </div>
+  </section>
+
+{% endblock %}

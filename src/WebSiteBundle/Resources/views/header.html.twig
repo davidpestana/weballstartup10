@@ -1,0 +1,42 @@
+
+{{ render(controller('WebSiteBundle:Default:Lead', {  })) }}
+{{ render(controller('WebSiteBundle:Default:LeadRecruiter', {  })) }}
+
+<!-- Header
+============================================= -->
+<header id="header" class="transparent-header">
+
+  <div id="header-wrap">
+
+    <div class="container clearfix">
+
+      <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+      <!-- Logo
+      ============================================= -->
+      <div id="logo">
+        <a href="{{ path('website_default_index') }}" class="standard-logo" data-dark-logo="/WebSiteBundle/images/logo-dark.png"><img src="/WebSiteBundle/images/logo.png" alt="Traqui"></a>
+        <a href="{{ path('website_default_index') }}" class="retina-logo" data-dark-logo="/WebSiteBundle/images/logo-dark@2x.png"><img src="/WebSiteBundle/images/logo@2x.png" alt="Traqui"></a>
+      </div><!-- #logo end -->
+
+      <!-- Primary Navigation
+      ============================================= -->
+      <nav id="primary-menu">
+
+        <ul>
+          <li class="current"><a href="{{ path('website_default_index') }}"><div>{% trans %}_menu_home{% endtrans %}</div></a></li>
+          <li><a href="{{ path('website_default_recruiters') }}"><div>{% trans %}_menu_recruiters{% endtrans %}</div></a></li>
+          <li><a href="#modal-login-form" data-lightbox="inline"><div>{% trans %}_signin{% endtrans %}</div></a></li>
+          <li><a href="#modal-login-form" data-lightbox="inline"><div>{% trans %}_signup{% endtrans %}</div></a></li>
+        </ul>
+
+      </nav><!-- #primary-menu end -->
+
+    </div>
+
+  </div>
+
+</header><!-- #header end -->
+
+<!-- Header End
+============================================= -->

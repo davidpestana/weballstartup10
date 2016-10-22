@@ -1,0 +1,29 @@
+<div class="container clearfix">
+
+  <div class="modal1 mfp-hide" id="modal-login-form">
+    <div class="block divcenter col-padding" style="background-color: #FFF; max-width: 800px;">
+      <h4 class="uppercase ls1">{% trans %}_lead_form_title{% endtrans %}</h4>
+      <p>{% trans %}_lead_form_subtitle{% endtrans %}</p>
+      {% form_theme form 'WebSiteBundle:Forms:lead.theme.html.twig' %}
+      {{ form_start(form) }}
+      {{ form_widget(form) }}
+      <div class="col_full nobottommargin">
+        <div class="row">
+          <div class="col-xs-6">
+            <button type="submit" class="button button-rounded button-small button-dark nomargin" value="submit">{% trans %}_lead_form_button{% endtrans %}</button>
+          </div>
+        </div>
+      </div>
+      {{ form_end(form) }}
+    </div>
+  </div>
+
+  <div class="modal2 mfp-hide" id="modal-login-form_success">
+    <div class="block divcenter col-padding" style="background-color: #FFF; max-width: 800px;">
+      <h4 class="uppercase ls1">{% trans %}_lead_form_thankyou_title{% endtrans %}</h4>
+      <p>{% trans %}_lead_form_thankyou_parragrahp{% endtrans %}</p>
+
+    </div>
+  </div>
+
+</div>

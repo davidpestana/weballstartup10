@@ -1,0 +1,16 @@
+{% extends 'PublicBundle::layout.html.twig' %}
+
+{% block content %}
+
+
+      {% include ('PublicBundle:Modules:sectiontitle.module.html.twig') %}
+      <!-- content begin -->
+      <div id="content">
+          <div class="container">
+                {% include ('PublicBundle:Modules:aboutusinfo.module.html.twig') %}
+                {% include ('PublicBundle:Modules:whyus.module.html.twig') %}
+                {% include ('PublicBundle:Modules:team.module.html.twig') %}
+
+          </div>
+    </div>
+{% endblock %}

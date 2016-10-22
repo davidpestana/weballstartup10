@@ -1,0 +1,44 @@
+<section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix" data-autoplay="8000">
+  <div class="slider-parallax-inner">
+
+    <div class="swiper-container swiper-parent">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide" style="background-image: url('/WebSiteBundle/images/slider/rev/ken-2.jpg');">
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center">
+              <h2 data-caption-animate="fadeInUp">{% trans %} _welcome_slide1_title{% endtrans %}</h2>
+              <p data-caption-animate="fadeInUp" data-caption-delay="200">
+                  {% trans %} _welcome_slide1_parragraph{% endtrans %}
+              </p>
+              <a href="#modal-login-form" data-lightbox="inline" class="button button-rounded button-reveal button-large button-dirtygreen"><i class="icon-map-marker2"></i><span>{% trans %} _welcome_slide1_cta1{% endtrans %}</span></a>
+
+              <a href="#modal-login-form2" data-lightbox="inline" class="button button-rounded button-reveal button-large button-dirtygreen"><i class="icon-map-marker2"></i><span>{% trans %} _welcome_slide1_cta2{% endtrans %}</span></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide dark">
+          <div class="container clearfix">
+            <div class="slider-caption slider-caption-center">
+              <h2 data-caption-animate="fadeInUp">{% trans %} _welcome_slide2_title{% endtrans %}</h2>
+              <p data-caption-animate="fadeInUp" data-caption-delay="200">
+                  {% trans %} _welcome_slide2_parragraph{% endtrans %}
+              </p>
+              <a href="#modal-login-form" data-lightbox="inline" class="button button-rounded button-reveal button-large button-dirtygreen"><i class="icon-map-marker2"></i><span>{% trans %} _welcome_slide2_cta{% endtrans %}</span></a>
+
+            </div>
+          </div>
+          <div class="video-wrap">
+            <video id="slide-video" poster="/WebSiteBundle/images/videos/explore.jpg" preload="auto" loop autoplay muted>
+              <source src='/WebSiteBundle/images/videos/explore.webm' type='video/webm' />
+              <source src='/WebSiteBundle/images/videos/explore.mp4' type='video/mp4' />
+            </video>
+            <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+          </div>
+        </div>
+
+    <a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+
+  </div>
+</section>

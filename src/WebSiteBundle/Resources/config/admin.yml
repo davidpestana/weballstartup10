@@ -1,0 +1,11 @@
+services:
+    web_site.admin.post:
+        class: WebSiteBundle\Admin\PostAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Content", label: "Contact" }
+        arguments:
+            - ~
+            - WebSiteBundle\Entity\Contact
+            - ~
+        calls:
+            - [ setTranslationDomain, [WebSiteBundle]]

@@ -1,0 +1,204 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+<!-- LOAD CSS FILES -->
+<link href="{{ asset('/css/main.css') }}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block javascripts %}
+
+<!-- LOAD JS FILES -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.isotope.min.js"></script>
+<script src="/js/easing.js"></script>
+<script src="/js/jquery.ui.totop.js"></script>
+<script src="/js/ender.js"></script>
+<script src="/js/owl.carousel.js"></script>
+<script src="/js/jquery.fitvids.js"></script>
+<script src="/js/jquery.plugin.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/jquery.stellar.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/jquery.scrollto.js"></script>
+<script src="/js/custom.js"></script>
+
+<!-- SLIDER REVOLUTION SCRIPTS  -->
+<script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+<script type="text/javascript" src="/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+<script src="/js/revslider-custom.js"></script>
+
+
+{% endblock %}
+
+
+
+
+{% block body %}
+<div id="preloader"></div>
+<div id="wrapper">
+  {% block header %}
+        <!-- header begin -->
+        <header>
+            <div class="container">
+                <span id="menu-btn"></span>
+                <div class="row">
+                    <div class="col-md-3">
+
+                        <!-- logo begin -->
+                        <div id="logo">
+                            <div class="inner">
+                                <a href="{{ path('public_default_index') }}">
+                                    <img src="/img/logo.png" alt="" class="logo-1">
+                                    <img src="/img/logo-2.png" alt="" class="logo-2">
+                                </a>
+
+                            </div>
+                        </div>
+                        <!-- logo close -->
+
+                    </div>
+
+
+
+
+                    <div class="col-md-9">
+
+
+                        <!-- mainmenu begin -->
+                        <nav id="mainmenu-container">
+                            <ul id="mainmenu">
+                                <li><a href="{{ path('public_default_index') }}">{% trans %}_menu_home{% endtrans %}</a>
+                                  {#  <ul>
+                                        <li><a href="index.html">Homepage 1</a></li>
+                                        <li><a href="index-2.html">Homepage 2</a></li>
+                                        <li><a href="index-3.html">Homepage 3</a></li>
+                                        <li><a href="index-4.html">Homepage 4</a></li>
+                                    </ul>#}
+                                </li>
+                                <li><a href="{{ path('public_default_services') }}">{% trans %}_menu_services{% endtrans %}</a>
+                                    <ul>
+                                      <li><a href="{{ path('public_default_track') }}">{% trans %}_menu_track{% endtrans %}</a></li>
+                                      <li><a href="{{ path('public_default_services') }}#zone1">{% trans %}_menu_services_1{% endtrans %}</a></li>
+                                      <li><a href="{{ path('public_default_services') }}#zone2">{% trans %}_menu_services_2{% endtrans %}</a></li>
+                                      <li><a href="{{ path('public_default_services') }}#zone3">{% trans %}_menu_services_3{% endtrans %}</a></li>
+                                      <li><a href="{{ path('public_default_services') }}#zone4">{% trans %}_menu_services_4{% endtrans %}</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="{{ path('public_default_workwithus') }}">{% trans %}_menu_workwithus{% endtrans %}</a></li>
+                                <li><a href="{{ path('public_default_aboutus') }}">{% trans %}_menu_aboutus{% endtrans %}</a></li>
+
+                                <li><a href="{{ path('public_default_contactus') }}">{% trans %}_menu_contactus{% endtrans %}</a></li>
+
+                                <li><a href="{{ path('public_default_comingsoon') }}" class="btn">{% trans %}_signin{% endtrans %}</a></li>
+                                <li><a href="{{ path('public_default_comingsoon') }}" class="btn">{% trans %}_signup{% endtrans %}</a></li>
+                            </ul>
+                        </nav>
+                        <!-- mainmenu close -->
+
+
+                        <!-- social icons
+                        <div class="social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-rss"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-envelope-o"></i></a>
+                        </div>
+                         social icons close -->
+
+
+
+
+
+                        {#<div class="buttons">
+                        <div class="buttons">
+
+                        </div>
+                          <a href="#" class="btn">{% trans %}_signin{% endtrans %}</a>
+                          <a href="#" class="btn">{% trans %}_signup{% endtrans %}</a>
+                          {% set locale = app.request.locale %}
+
+                          <select class="btn" onchange="window.location.href=this.value">
+                              <option {% if locale == 'es' %} selected {% endif %} value="{{ path('public_default_index', { '_locale': 'es' }) }}">castellano</option>
+                              <option {% if locale == 'cat' %} selected {% endif %} value="{{ path('public_default_index', { '_locale': 'cat' }) }}">catalá</option>
+                              <option {% if locale == 'en' %} selected {% endif %} value="{{ path('public_default_index', { '_locale': 'en' }) }}">english</option>
+                          </select>
+
+
+                        </div>#}
+
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- header close -->
+  {% endblock %}
+
+  <div id="content" class="no-padding">
+  {% block content %}{% endblock %}
+  </div>
+
+  {% block footer %}
+
+  <!-- footer begin -->
+  <footer>
+      <div class="container">
+          <div class="row">
+
+
+
+              <div class="col-md-4">
+                  <h3>{% trans %}_footer_left_title{% endtrans %}</h3>
+                  <div class="tiny-border"></div>
+                  <ul>
+                      <li><a href="#">{% trans %}_footer_left_option1{% endtrans %}</a></li>
+                      <li><a href="#">{% trans %}_footer_left_option2{% endtrans %}</a></li>
+                      <li><a href="#">{% trans %}_footer_left_option3{% endtrans %}</a></li>
+                      <li><a href="#">{% trans %}_footer_left_option4{% endtrans %}</a></li>
+                      <li><a href="#">{% trans %}_footer_left_option5{% endtrans %}</a></li>
+                      <li><a href="#">{% trans %}_footer_left_option6{% endtrans %}</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-md-4">
+                  <h3>{% trans %}_footer_center_title{% endtrans %}</h3>
+                  <div class="tiny-border"></div>
+                  {% trans %}_footer_center_parragraph{% endtrans %}
+
+                  <div class="divider-single"></div>
+                  <div class="social-icons">
+                      <a href="#"><i class="fa fa-facebook"></i></a>
+                      <a href="#"><i class="fa fa-twitter"></i></a>
+                      <a href="#"><i class="fa fa-google-plus"></i></a>
+                      <a href="#"><i class="fa fa-rss"></i></a>
+                      <a href="#"><i class="fa fa-envelope-o"></i></a>
+                  </div>
+              </div>
+
+              <div class="col-md-4">
+                  <h3>{% trans %}_footer_right_title{% endtrans %}</h3>
+                  <div class="tiny-border"></div>
+                  <p>{% trans %}_footer_right_parragraph{% endtrans %}</p>
+                  <a href="#" class="btn-border-light">{% trans %}_footer_cta{% endtrans %}</a>
+              </div>
+
+          </div>
+      </div>
+      <div class="divider"></div>
+
+      <div class="container">
+          <div class="row">
+              <div class="col-md-12 text-center">
+                  <div class="spacer-single"></div>
+                  {% trans %}_footer_copyright{% endtrans %}
+              </div>
+          </div>
+      </div>
+  </footer>
+  <!-- footer close -->
+
+  {% endblock %}
+</div>
+{% endblock %}

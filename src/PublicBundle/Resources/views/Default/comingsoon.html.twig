@@ -1,0 +1,49 @@
+{% extends 'PublicBundle::layout.html.twig' %}
+
+{% block content %}
+
+
+      {% include ('PublicBundle:Modules:sectiontitle.module.html.twig') %}
+      <!-- content begin -->
+
+            <section id="service-details-3" class="side-bg">
+                <div class="col-md-6 col-md-offset-6 pull-right image-container">
+                    <div class="background-image"></div>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5 wow fadeInRight" data-wow-delay=".5s" data-wow-duration=".8s">
+
+                            <p class="lead">{% trans %}_comingsoon_lead{% endtrans %}</p>
+
+                            <p>{% trans %}_comingsoon_disclaimer{% endtrans %}</p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="clearfix"></div>
+
+
+            </section>
+			<!-- section close -->
+
+
+            <div class="call-to-action text-light">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h2>{% trans %}_comingsoon_cta_phrase{% endtrans %}</h2>
+                        </div>
+
+                        <div class="col-md-3">
+                            <a href="{{ path('public_default_contactus') }}" class="btn-border-light">{% trans %}_comingsoon_cta{% endtrans %}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+{% endblock %}

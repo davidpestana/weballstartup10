@@ -1,0 +1,13 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: localhost
+    database_port: 3306
+    database_name: demium
+    database_user: root
+    database_password: jamon123
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    secret: 24f3ca1e91f57cfb02fb66f9eb35d135859bbefb
+    locale: es

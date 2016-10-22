@@ -1,0 +1,37 @@
+{% extends 'form_div_layout.html.twig' %}
+
+
+{%- block form_widget -%}
+    {% if compound %}
+        {{- block('form_widget_compound') -}}
+    {% else %}
+        {{- block('form_widget_simple') -}}
+    {% endif %}
+{%- endblock form_widget -%}
+
+
+{%- block form_row -%}
+      {% if form.vars.block_prefixes[2] != 'textarea' %}
+            {% set myclass = 'required form-control input-block-level' %}
+            <div class="input-group divcenter">
+                {{- form_errors(form) -}}
+                {{- form_widget(form, {'attr': {'class': myclass}}) -}}
+            </div>
+      {% else %}
+            {% set myclass = 'required form-control input-block-level short-textarea' %}
+            {{- form_errors(form) -}}
+            {{- form_widget(form, {'attr': {'class': myclass}}) -}}
+      {% endif %}
+{%- endblock form_row -%}
+
+
+{%- block form_widget_simple -%}
+    {%- set type = type|default('text') -%}
+    {% if type == 'text' %}
+      <span class="input-group-addon"><i class="icon-user"></i></span>
+    {% endif %}
+    {% if type == 'email' %}
+      <span class="input-group-addon"><i class="icon-email2"></i></span>
+    {% endif %}
+    <input type="{{ type }}" {{ block('widget_attributes') }} {% if value is not empty %}value="{{ value }}" {% endif %}/>
+{%- endblock form_widget_simple -%}

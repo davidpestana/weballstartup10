@@ -1,0 +1,24 @@
+{% extends 'WebSiteBundle::layout.html.twig' %}
+
+
+{% block title %}
+  {% trans %}_home_title{% endtrans %}
+{% endblock %}
+
+{% block content %}
+
+  <!-- Content
+  ============================================= -->
+  <section id="content">
+    <div class="content-wrap">
+
+      {% include ('WebSiteBundle:Modules:services.module.html.twig') %}
+
+        {# include ('WebSiteBundle:Modules:carrierinfo.module.html.twig') #}
+
+        {# include ('WebSiteBundle:Modules:customerlogos.module.html.twig') #}
+
+    </div>
+  </section>
+
+{% endblock %}
